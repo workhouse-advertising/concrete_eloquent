@@ -1,0 +1,20 @@
+{
+    "name": "workhouse-advertising/concrete_eloquent",
+    "description": "Enables Laravel Eloquent ORM in Concrete5",
+    "type": "concrete5-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Workhouse Advertising",
+            "email": "digital@workhouseadvertising.com.au"
+        }
+    ],
+    "require": {
+        "concrete5/core": "^8.2",
+        "illuminate/database": "5.2.*",
+        "illuminate/events": "5.2.*",
+        "sofa/eloquence": "^5.2",
+        "robmorgan/phinx": "^0.10.5",
+        "rappasoft/laravel-helpers": "^1.0"
+    }
+}
