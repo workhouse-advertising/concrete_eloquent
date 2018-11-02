@@ -12,7 +12,7 @@ use Illuminate\Container\Container;
 
 class Controller extends Package
 {
-    protected $pkgHandle = 'eloquent';
+    protected $pkgHandle = 'concrete_eloquent';
     protected $appVersionRequired = '5.7.1';
     protected $pkgVersion = '1.0.0';
 
@@ -33,11 +33,11 @@ class Controller extends Package
         //// TODO: Check default connection (driver type, etc...) and allow the ability to specify alternative connections
         $capsuleManager->addConnection(array(
             'driver' => 'mysql',
-            'host' => Config::get('database.concrete.server'),
-            'database' => Config::get('database.concrete.database'),
-            'username' => Config::get('database.concrete.username'),
-            'password' => Config::get('database.concrete.password'),
-            'charset' => Config::get('database.concrete.charset'),
+            'host' => Config::get('database.connections.concrete.server'),
+            'database' => Config::get('database.connections.concrete.database'),
+            'username' => Config::get('database.connections.concrete.username'),
+            'password' => Config::get('database.connections.concrete.password'),
+            'charset' => Config::get('database.connections.concrete.charset'),
             'prefix' => ''
         ));
         $capsuleManager->setEventDispatcher(new Dispatcher(new Container));
